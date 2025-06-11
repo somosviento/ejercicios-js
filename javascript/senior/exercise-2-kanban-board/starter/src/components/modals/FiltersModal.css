@@ -1,0 +1,105 @@
+.filters-modal {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.sort-options,
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.sort-option,
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s;
+}
+
+.sort-option:hover,
+.filter-option:hover {
+  background-color: var(--gray-100);
+}
+
+.priority-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.priority-badge.high {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--priority-high);
+}
+
+.priority-badge.medium {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: var(--priority-medium);
+}
+
+.priority-badge.low {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: var(--priority-low);
+}
+
+.date-range {
+  display: flex;
+  gap: 1rem;
+}
+
+.date-range .form-group {
+  flex: 1;
+}
+
+.assignee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.assignee-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-avatar-sm {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  padding: 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-text:hover {
+  text-decoration: underline;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.form-actions > div {
+  display: flex;
+  gap: 0.75rem;
+}

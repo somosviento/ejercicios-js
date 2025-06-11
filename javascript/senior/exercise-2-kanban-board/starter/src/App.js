@@ -2,20 +2,23 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { fetchBoards, selectActiveBoard, moveTask, moveColumn } from './store/slices/boardSlice';
+import { fetchUsers } from './store/slices/userSlice';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import BoardView from './components/BoardView';
 import LoadingSpinner from './components/LoadingSpinner';
 import ErrorMessage from './components/ErrorMessage';
+import ModalManager from './components/modals/ModalManager';
 import './App.css';
 
 function App() {
   const dispatch = useDispatch();
   const { status, error, activeBoard } = useSelector(state => state.boards);
   
-  // Fetch boards on component mount
+  // Fetch boards and users on component mount
   useEffect(() => {
     dispatch(fetchBoards());
+    dispatch(fetchUsers());
   }, [dispatch]);
   
   // Handle drag end for tasks and columns
@@ -78,6 +81,9 @@ function App() {
             )}
           </main>
         </div>
+        {/* Modal container for portal rendering */}
+        <div id="modal-root"></div>
+        <ModalManager />
       </div>
     </DragDropContext>
   );
