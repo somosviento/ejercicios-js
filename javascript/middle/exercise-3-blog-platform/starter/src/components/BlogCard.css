@@ -1,0 +1,147 @@
+.blog-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.05);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.25rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.blog-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-card-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.category a {
+  color: #3b82f6;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.category a:hover {
+  text-decoration: underline;
+}
+
+.date {
+  color: #6b7280;
+}
+
+.blog-card-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.blog-card-title a {
+  color: #1f2937;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.blog-card-title a:hover {
+  color: #3b82f6;
+}
+
+.blog-card-excerpt {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.blog-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.author {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.read-more {
+  display: flex;
+  align-items: center;
+  color: #3b82f6;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.read-more svg {
+  margin-left: 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+  color: #2563eb;
+}
+
+.read-more:hover svg {
+  transform: translateX(3px);
+}
+
+.blog-card.featured {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .blog-card.featured {
+    grid-column: span 1;
+  }
+  
+  .blog-card-image {
+    height: 180px;
+  }
+}

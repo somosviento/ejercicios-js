@@ -7,11 +7,13 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 // Pages
-import HomePage from './pages/HomePage';
-import BlogListPage from './pages/BlogListPage';
-import SinglePostPage from './pages/SinglePostPage';
-import CategoryPage from './pages/CategoryPage';
-import NotFoundPage from './pages/NotFoundPage';
+import { 
+  HomePage, 
+  BlogListPage, 
+  SinglePostPage, 
+  CategoryPage, 
+  NotFoundPage 
+} from './pages';
 
 function App() {
   return (
