@@ -1,0 +1,19 @@
+.todo-list {
+  margin-top: 20px;
+}
+
+.empty-list {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  font-style: italic;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.todo-count {
+  margin-top: 20px;
+  text-align: right;
+  color: #666;
+  font-size: 0.9rem;
+}

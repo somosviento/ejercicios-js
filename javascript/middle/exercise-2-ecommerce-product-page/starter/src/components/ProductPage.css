@@ -1,0 +1,16 @@
+.product-page {
+  padding: 40px 0;
+}
+
+.product-container {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

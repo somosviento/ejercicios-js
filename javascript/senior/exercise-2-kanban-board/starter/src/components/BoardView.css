@@ -1,0 +1,68 @@
+.board-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.board-header {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.board-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--gray-900);
+}
+
+.board-description {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.board-columns {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  height: calc(100% - 80px);
+  align-items: flex-start;
+}
+
+.add-column {
+  flex: 0 0 280px;
+  min-width: 280px;
+  height: 100px;
+  margin-right: 1rem;
+}
+
+.add-column-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--border-radius);
+  color: var(--gray-500);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-column-button:hover {
+  background-color: white;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.add-column-button svg {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.add-column-button span {
+  font-weight: 500;
+}

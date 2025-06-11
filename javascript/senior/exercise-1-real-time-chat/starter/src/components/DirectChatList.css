@@ -1,0 +1,68 @@
+.direct-chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.direct-chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.direct-chat-item:hover {
+  background-color: var(--gray-700);
+}
+
+.direct-chat-item.active {
+  background-color: var(--primary-color);
+}
+
+.direct-chat-info {
+  flex: 1;
+  margin-left: 12px;
+  overflow: hidden;
+}
+
+.direct-chat-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0 0 2px 0;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.direct-chat-preview {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.direct-chat-item.active .direct-chat-preview {
+  color: var(--primary-light);
+}
+
+.empty-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.empty-list small {
+  font-size: 0.8rem;
+  margin-top: 8px;
+  color: var(--gray-600);
+}
